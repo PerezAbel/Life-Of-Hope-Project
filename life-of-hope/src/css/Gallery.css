@@ -1,0 +1,173 @@
+/* Gallery.css */
+.current-causes {
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: #2e8b57;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.section-header p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.causes-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.causes-scroll {
+  display: flex;
+  gap: 25px;
+  padding: 20px 0;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.causes-scroll::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
+.cause-card {
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.cause-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.cause-card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+.card-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.card-content h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.support-button {
+  background-color: #2e8b57;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.support-button:hover {
+  background-color: #247348;
+}
+
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.scroll-button:hover {
+  background-color: #2e8b57;
+  color: white;
+}
+
+.scroll-button.left {
+  left: -20px;
+}
+
+.scroll-button.right {
+  right: -20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .cause-card {
+    flex: 0 0 280px;
+  }
+  
+  .scroll-button {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .scroll-button.left {
+    left: -15px;
+  }
+  
+  .scroll-button.right {
+    right: -15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .current-causes {
+    padding: 40px 15px;
+  }
+  
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .cause-card {
+    flex: 0 0 260px;
+  }
+}

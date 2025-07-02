@@ -1,0 +1,60 @@
+.newsletter-section {
+  background-image: url('https://www.stockvault.net/data/2007/03/01/101613/thumb16.jpg'); /* Adjust path if needed */
+  background-size: cover;
+  background-position: center;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.newsletter-overlay {
+  text-align: center;
+  color: white;
+  
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 1200px;
+}
+
+.newsletter-overlay h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 0.8rem 1.2rem;
+  border-radius: 40px;
+  border: none;
+  font-size: 1rem;
+  min-width: 280px;
+  flex-grow: 1;
+  max-width: 500px;
+  outline: none;
+}
+
+.newsletter-form button {
+  background-color: #f9b401;
+  color: white;
+  border: none;
+  border-radius: 40px;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #d99900;
+}

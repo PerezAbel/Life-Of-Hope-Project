@@ -4,17 +4,7 @@ import React from 'react';
 const TopButton = () => {
     return (   
         <div className="NavBar">  
-
-        {/*NavBar   
-          About Our Webiste  
-          Usefull links  
-          Important Links  
-          Address
-          Email 
-          Phone  
-          Cportight 
-          Socials
-         */  }
+        {/* Take user to the top of the page*/  }
         </div>   
     );
 };

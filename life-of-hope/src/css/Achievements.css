@@ -1,0 +1,213 @@
+.life-of-hope-container {
+  font-family: 'Arial', sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Testimonial Section */
+.testimonial-section {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 60px;
+  align-items: center;
+}
+
+.testimonial-content {
+  flex: 1;
+}
+
+.section-title {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: #0066cc;
+}
+
+.testimonial-slider {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.testimonial-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.testimonial-slide.active {
+  opacity: 1;
+}
+
+.testimonial-text {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.testimonial-author {
+  margin-top: 15px;
+}
+
+.author-name {
+  font-weight: bold;
+  font-size: 16px;
+  color: #0066cc;
+}
+
+.author-role {
+  font-size: 14px;
+  color: #666;
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dot.active {
+  background-color: #0066cc;
+}
+
+.testimonial-image {
+  flex: 1;
+}
+
+.testimonial-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Impact Section */
+.impact-section {
+  display: flex;
+  gap: 40px;
+  background-color: #f9f9f9;
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.impact-content {
+  flex: 1;
+}
+
+.impact-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.organization-info {
+  margin-top: 30px;
+}
+
+.organization-name {
+  font-weight: bold;
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.organization-website {
+  font-size: 16px;
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.impact-stats {
+  flex: 1;
+  text-align: center;
+}
+
+.years-range {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.years-count {
+  font-size: 72px;
+  font-weight: bold;
+  color: #0066cc;
+  line-height: 1;
+  margin: 10px 0;
+}
+
+.years-label {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.stat-item {
+  padding: 15px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.stat-number {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0066cc;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .testimonial-section,
+  .impact-section {
+    flex-direction: column;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .testimonial-image {
+    order: -1;
+    margin-bottom: 30px;
+  }
+}
