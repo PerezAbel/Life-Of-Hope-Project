@@ -17,18 +17,18 @@ const NavBar = () => {
     <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
       <div className="navbar-container">
         <div className="navbar-left">
-          <Link to="/" className="navbar-logo">🌿 Hope</Link>
+          <Link to="/" className="navbar-logo"> Life Of Hope Community Project</Link>
         </div>
 
         <div className="navbar-center">
           <Link to="/home" className="navbar-link">Home</Link>
-          <Link to="/gallery" className="navbar-link">About Us</Link>
-          <Link to="/contact" className="navbar-link">Gallery</Link>
+          <Link to="/aboutus" className="navbar-link">About Us</Link>
+          <Link to="/gallery" className="navbar-link">Gallery</Link>
           <Link to="/contact" className="navbar-link">More</Link>
         </div>
 
         <div className="navbar-right">
-          <Link to="/contact">
+          <Link to="/donate">
             <button className="donate-button">Donate</button>
           </Link>
         </div>

@@ -16,7 +16,6 @@ function Home() {
       <ImageSlider/>
       <Intro/>      
       <Impact />   
-      <Gallery /> 
       <Achievements/>  
       <LatestNews/>
      

@@ -1,6 +1,6 @@
 .footer {
-  background-color: #121212;
-  color: #b3b3b3;
+  background: linear-gradient(135deg, #1a2980, #26d0ce);;;
+  color: #ffffff;
   padding: 40px 20px;
   display: flex;
   flex-wrap: wrap;
@@ -14,7 +14,7 @@
 }
 
 .footer__section h4 {
-  color: #ffffff;
+  color: #e1d600;
   margin-bottom: 10px;
   font-size: 16px;
 }
@@ -32,13 +32,13 @@
 }
 
 .footer__section li:hover {
-  color: rgb(255, 6, 247);;
+  color: #eeff00;
 }
 
 .footer__copyright {
   width: 100%;
   text-align: center;
   margin-top: 30px;
-  font-size: 14px;
-  color: #888;
+  font-size: 20px;  
+  color: #ffffff;
 }

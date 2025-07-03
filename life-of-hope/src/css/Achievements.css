@@ -1,16 +1,16 @@
 .life-of-hope-container {
   font-family: 'Arial', sans-serif;
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 40px 20px;
 }
 
 /* Testimonial Section */
 .testimonial-section {
   display: flex;
   gap: 40px;
-  margin-bottom: 60px;
+  background: linear-gradient(135deg, #26d0ce, #1a2980);
   align-items: center;
+  padding: 40px;
 }
 
 .testimonial-content {
@@ -18,8 +18,8 @@
 }
 
 .section-title {
-  font-size: 28px;
-  color: #333;
+  font-size: 50px;
+  color: #fff046;
   margin-bottom: 20px;
   position: relative;
   padding-bottom: 10px;
@@ -32,7 +32,7 @@
   left: 0;
   width: 60px;
   height: 3px;
-  background-color: #0066cc;
+  background-color: #053fc9f1;
 }
 
 .testimonial-slider {
@@ -55,7 +55,7 @@
 }
 
 .testimonial-text {
-  font-size: 18px;
+  font-size: 30px;
   line-height: 1.6;
   color: #333;
   margin-bottom: 20px;
@@ -68,8 +68,8 @@
 
 .author-name {
   font-weight: bold;
-  font-size: 16px;
-  color: #0066cc;
+  font-size: 25px;
+  color: #f8f8f8;
 }
 
 .author-role {
@@ -95,7 +95,7 @@
 }
 
 .dot.active {
-  background-color: #0066cc;
+  background-color: #f6fd2d;
 }
 
 .testimonial-image {
@@ -105,28 +105,21 @@
 .testimonial-image img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* Impact Section */
-.impact-section {
-  display: flex;
-  gap: 40px;
-  background-color: #f9f9f9;
-  padding: 40px;
-  border-radius: 8px;
-}
+/* Impact Section - Updated as requested */
+
 
 .impact-content {
-  flex: 1;
+  width: 100%; /* Full width content */
 }
 
 .impact-description {
   font-size: 16px;
   line-height: 1.6;
   color: #333;
-  margin-bottom: 20px;
+  
 }
 
 .organization-info {
@@ -146,59 +139,63 @@
   text-decoration: none;
 }
 
+/* Impact Stats - Updated as requested */
 .impact-stats {
-  flex: 1;
+  width: 100%;
   text-align: center;
+ background: linear-gradient(135deg, #1a2980, #26d0ce);;
+  padding: 30px;
+ 
+ 
 }
 
 .years-range {
   font-size: 16px;
-  color: #666;
+  color: #ffffff;
   margin-bottom: 5px;
 }
 
 .years-count {
   font-size: 72px;
   font-weight: bold;
-  color: #0066cc;
+  color: #f4f5f5;
   line-height: 1;
   margin: 10px 0;
 }
 
 .years-label {
   font-size: 18px;
-  color: #333;
+  color: #00fbde;
   margin-bottom: 30px;
 }
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 20px;
 }
 
 .stat-item {
-  padding: 15px;
-  background-color: white;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+ 
+ 
+ 
 }
 
 .stat-number {
-  font-size: 24px;
-  font-weight: bold;
-  color: #0066cc;
+  font-size: 40px;
+  font-weight: bold; 
+  color: #fdfdfd;
+
   margin-bottom: 5px;
 }
 
 .stat-label {
   font-size: 14px;
-  color: #666;
+  color: #01ffff;
 }
 
 @media (max-width: 768px) {
-  .testimonial-section,
-  .impact-section {
+  .testimonial-section {
     flex-direction: column;
   }
   

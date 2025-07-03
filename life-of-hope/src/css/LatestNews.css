@@ -1,8 +1,9 @@
 .latest-news-container {
   font-family: Arial, sans-serif;
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 40px 20px; 
+  background-color: rgb(255, 255, 255);;
 }
 
 .section-header {
@@ -27,7 +28,11 @@
 .news-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+  gap: 30px; 
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px; 
+  background-color: rgb(255, 255, 255);;
 }
 
 .news-card {

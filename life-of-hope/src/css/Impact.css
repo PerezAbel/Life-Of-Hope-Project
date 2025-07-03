@@ -29,7 +29,7 @@
 }
 
 .story-title {
-  color: #2e8b57; /* Green color */
+  color: #feffff; /* Green color */
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 40px;
@@ -61,13 +61,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(46,139,87,0.2) 0%, rgba(0,0,0,0.5) 100%);
+  background: linear-gradient(135deg, rgba(252, 254, 253, 0.2) 0%, rgba(0,0,0,0.5) 100%);
 }
 
 .play-button {
   width: 80px;
   height: 80px;
-  background-color: rgba(46, 139, 87, 0.8);
+  background-color: rgba(118, 118, 118, 0.8);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -77,8 +77,9 @@
 }
 
 .video-container:hover .play-button {
-  transform: scale(1.1);
-  background-color: rgba(46, 139, 87, 1);
+  transform: scale(1.1); 
+  background-color: linear-gradient(135deg, #0a2ce9, #06f1ed);;;
+  
 }
 
 .video-caption {

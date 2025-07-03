@@ -106,21 +106,19 @@ const LifeOfHope = () => {
       {/* Our Impact Section */}
       <div className="impact-section">
         <div className="impact-content">
-          <h2 className="section-title">Our Impact</h2>
+         
+        </div>
+        
+        <div className="impact-stats"> 
+           <h2 className="section-title">Our Impact</h2>
           <p className="impact-description">
             We have an impeccable reputation for the support we provide our foster children and families. 
             We maintain frequent, consistent contact.
           </p>
           
-          <div className="organization-info">
-            <p className="organization-name">Families Centre</p>
-            <p className="organization-website">www.familiescenter.com</p>
-          </div>
-        </div>
-        
-        <div className="impact-stats">
-          <div className="years-range">1897-2017</div>
-          <div className="years-count">120</div>
+          
+          <div className="years-range">2011-Present</div>
+          <div className="years-count">14</div>
           <div className="years-label">Years of Service</div>
           
           <div className="stats-grid">

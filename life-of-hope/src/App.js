@@ -1,6 +1,7 @@
 import './App.css';
-import React from 'react';  
-
+import React from 'react';    
+import AboutUs from './components/AboutUs';
+import Donate from './components/Donate';
 import Gallery from './components/Gallery';
 import Home from './components/Home'
 import NavBar from './components/Navbar';
@@ -14,7 +15,9 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/home" element={<Home/>} />
-          <Route path="/gallery" element={<Gallery/>} />
+          <Route path="/aboutus" element={<AboutUs/>} />  
+          <Route path="/gallery" element={<Gallery/>} />  
+          <Route path="/donate" element={<Donate/>} /> 
         </Routes>  
         <Footer/>
       </div>

@@ -9,7 +9,7 @@
 }
 
 .navbar-scrolled {
-  background: rgba(0, 0, 0, 0.9);
+  background: linear-gradient(135deg, #1a2980, #26d0ce);;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -27,7 +27,7 @@
 }
 
 .navbar-logo {
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: bold;
   color: #ffffff;
   text-decoration: none;
@@ -52,7 +52,7 @@
 }
 
 .navbar-link:hover {
-  color: #4CAF50;
+  color: #f2f200;
 }
 
 .navbar-link::after {
@@ -63,7 +63,7 @@
   transform: translateX(-50%);
   width: 0;
   height: 2px;
-  background-color: #4CAF50;
+  background-color: #e9f009;
   transition: width 0.3s ease;
 }
 
@@ -79,7 +79,7 @@
 
 .donate-button {
   padding: 10px 20px;
-  background-color: #4CAF50;
+  background-color: linear-gradient(135deg, #1a2980, #26d0ce);;;
   border: none;
   color: white;
   border-radius: 25px;
@@ -88,8 +88,9 @@
   transition: background-color 0.3s ease;
 }
 
-.donate-button:hover {
-  background-color: #388E3C;
+.donate-button:hover { 
+   background-color: linear-gradient(135deg, #0a2ce9, #06f1ed);;;
+  
 }
 
 /* Mobile responsiveness */
