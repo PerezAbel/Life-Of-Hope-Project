@@ -1,52 +1,59 @@
-import React from 'react';  
-import '../css/Footer.css'
-
+import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="footer__section">
-        <h4>Navigation</h4>
-        <ul>
-          <li>About Us</li>
-          <li>Gallery</li>
-          <li>Contact Us</li>   
-          <li>Join Us</li> 
-          <li>Donate Now</li>
+    <footer className="bg-blue-950 text-white px-6 py-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+        <div>
+          <h4 className="text-lg font-semibold mb-4 text-yellow-400">Navigation</h4>
+          <ul className="space-y-2">
+            <li className="hover:text-yellow-300 cursor-pointer">About Us</li>
+            <li className="hover:text-yellow-300 cursor-pointer">Gallery</li>
+            <li className="hover:text-yellow-300 cursor-pointer">Contact Us</li>
+            <li className="hover:text-yellow-300 cursor-pointer">Join Us</li>
+            <li className="hover:text-yellow-300 cursor-pointer">Donate Now</li>
+          </ul>
+        </div>
 
-        </ul>
+        <div>
+          <h4 className="text-lg font-semibold mb-4 text-yellow-400">Keep in Touch</h4>
+          <ul className="space-y-2">
+            <li className="hover:text-yellow-300 cursor-pointer">ShopAll</li>
+            <li className="hover:text-yellow-300 cursor-pointer">Phones</li>
+            <li className="hover:text-yellow-300 cursor-pointer">Laptops</li>
+            <li className="hover:text-yellow-300 cursor-pointer">iPads & Tablets</li>
+            <li className="hover:text-yellow-300 cursor-pointer">Gaming Consoles</li>
+            <li className="hover:text-yellow-300 cursor-pointer">Drones</li>
+            <li className="hover:text-yellow-300 cursor-pointer">Home Appliances</li>
+          </ul>
+        </div>
+
+
+        <div>
+          <h4 className="text-lg font-semibold mb-4 text-yellow-400">Info</h4>
+          <ul className="space-y-2">
+            <li className="hover:text-yellow-300 cursor-pointer">Shipping & Returns</li>
+            <li className="hover:text-yellow-300 cursor-pointer">Terms & Conditions</li>
+            <li className="hover:text-yellow-300 cursor-pointer">Payment Methods</li>
+            <li className="hover:text-yellow-300 cursor-pointer">Help</li>
+          </ul>
+        </div>
+
+
+        <div>
+          <h4 className="text-lg font-semibold mb-4 text-yellow-400">Captain Bummer HQ</h4>
+          <ul className="space-y-2">
+            <li className="hover:text-yellow-300">500 Terry Francine Street</li>
+            <li className="hover:text-yellow-300">San Francisco, CA 94158</li>
+            <li className="hover:text-yellow-300">📞 123-456-7890</li>
+            <li className="hover:text-yellow-300">📧 captain@bummerz.org</li>
+          </ul>
+        </div>
       </div>
-      <div className="footer__section">
-        <h4>Keep in Touch</h4>
-        <ul>
-          <li>ShopAll</li>
-          <li>Phones</li>
-          <li>Laptops</li>
-          <li>Ipads & Tables</li>
-          <li>Gaming Consoles</li> 
-          <li>Drones</li>  
-          <li>Home Apliances</li>
-        </ul>
-      </div>
-      <div className="footer__section">
-        <h4>Address</h4>
-        <ul>
-          <li>Shipping & Returns </li>
-          <li>Terms & Conditions</li>
-          <li>Payment Methods </li> 
-          <li>Help </li>
-        </ul>
-      </div>
-      <div className="footer__section">
-        <h4>Socials</h4>
-        <ul>
-          <li>Store Location500 Terry Francine Street</li>
-          <li>San Francisco, CA 94158</li>
-          <li>123-456-7890</li>
-        </ul>
-      </div>
-      <div className="footer__copyright">
-        © 2025 Copyright BunnyTunez |All rights reserved 
+
+      {/* Footer Bottom */}
+      <div className="mt-10 border-t border-blue-800 pt-6 text-center text-xs text-gray-400">
+        © 2025 Bage316 & Bunney Tunez | All rights reserved
       </div>
     </footer>
   );
