@@ -92,15 +92,15 @@ const NavBar = () => {
               <div className="dropdown-menu">
                 <Link to="/sublink1" className="dropdown-item">
                   <span className="dropdown-bullet"></span>
-                  Sublink 1
+                  The Future
                 </Link>
                 <Link to="/sublink2" className="dropdown-item">
                   <span className="dropdown-bullet"></span>
-                  Sublink 2
+                  Boy Child
                 </Link>
                 <Link to="/sublink3" className="dropdown-item">
                   <span className="dropdown-bullet"></span>
-                  Sublink 3
+                  Teen Moms
                 </Link>
               </div>
             )}
