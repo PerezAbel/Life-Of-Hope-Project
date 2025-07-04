@@ -3,7 +3,8 @@ import React from "react";
 import ImageSlider from './ImageSlider';  
 import Intro from './Intro';
 import Impact from './Impact';
-import Gallery from './Gallery';
+
+import Container from "./Container";
 
 import Achievements from "./Achievemnets";
 import Newsletter from "./NewsLater"; 
@@ -13,7 +14,8 @@ import LatestNews from './LatestNews'
 function Home() {
   return (  
     <div className='Main'> 
-      <ImageSlider/>
+      <ImageSlider/>  
+      <Container />
       <Intro/>      
       <Impact />   
       <Achievements/>  

@@ -1,191 +1,338 @@
-/* AboutPage.css */
-
-.about-page {
-  max-width: 100%;
-  margin: 0 auto;   
- 
-  font-family: Arial, sans-serif;
+/* Base Styles */
+.about-us-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #FFF9C4 0%, #B3E5FC 100%);
+  position: relative;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 2rem;
 }
 
-/* Section 1: Mission Section */
-.mission-section {
-  margin-bottom: 4rem;
+/* Decorative Elements */
+.about-us-container::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 300px;
+  height: 300px;
+  background-color: rgba(179, 229, 252, 0.3);
+  border-radius: 50%;
+  z-index: 0;
 }
 
-.mission-image img {
-  width: 100%;
-  height: 800px;
- 
-  object-fit: cover;
- 
+.about-us-container::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 400px;
+  height: 400px;
+  background-color: rgba(255, 241, 118, 0.3);
+  border-radius: 50%;
+  z-index: 0;
 }
 
-.mission-content h1 {
+/* Typography */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #0D47A1;
+}
+
+h1 {
   font-size: 2.5rem;
-  color: #333;
-  margin-top: 1.5rem;
-}
-
-.mission-content h2 {
-  font-size: 1.8rem;
-  color: #555;
-  margin-bottom: 2rem;
-}
-
-.mission-statement {
-  margin-bottom: 2.5rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid #eee;
-}
-
-.mission-statement h3 {
-  font-size: 1.4rem;
-  color: #444;
-  margin-bottom: 1rem;
-}
-
-.mission-statement p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #666;
-  margin-bottom: 1rem;
-}
-
-.tag {
-  display: inline-block;
-  padding: 0.3rem 0.8rem;
-  background-color: #f0f0f0;
-  border-radius: 20px;
-  font-weight: bold;
-  color: #555;
-}
-
-.mission-footer {
-  font-style: italic;
-  color: #777;
-}
-
-/* Section 2: Info Section */
-.info-section {
-  display: flex;
-  gap: 3rem;
-  margin-bottom: 4rem;
-  align-items: center;
-}
-
-.info-content {
-  flex: 1;
-}
-
-.info-content h2 {
-  font-size: 2rem;
-  color: #333;
   margin-bottom: 1.5rem;
 }
 
-.info-content p {
-  font-size: 1.1rem;
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: #FFC107;
+  margin: 0.5rem auto 0;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+p {
   line-height: 1.6;
-  color: #666;
+  color: #424242;
+  margin-bottom: 1rem;
 }
 
-.info-image {
-  flex: 1;
+.highlight-yellow {
+  color: #FF8F00;
+  font-weight: 600;
 }
 
-.info-image img {
-  width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+.highlight-blue {
+  color: #1565C0;
+  font-weight: 600;
 }
 
-/* Section 3: Founders Section */
-.founders-section {
+/* Hero Section */
+.about-hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3rem;
   margin-bottom: 4rem;
 }
 
-.founders-section h2 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 2rem;
-  text-align: center;
+.about-text {
+  flex: 1;
+  min-width: 300px;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
-.founders-grid {
+.about-image-container {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+}
+
+.image-decoration {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  z-index: -1;
+}
+
+.image-decoration.blue {
+  background-color: #BBDEFB;
+  top: -15px;
+  left: -15px;
+}
+
+.image-decoration.yellow {
+  background-color: #FFF59D;
+  bottom: -15px;
+  right: -15px;
+}
+
+.about-main-image {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Vision & Mission Section */
+.vision-mission {
+  margin-bottom: 4rem;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.vision-card,
+.mission-card,
+.approach-card,
+.values-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.vision-card:hover,
+.mission-card:hover,
+.approach-card:hover,
+.values-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.vision-card {
+  border-top: 5px solid #FFC107;
+}
+
+.mission-card {
+  border-top: 5px solid #42A5F5;
+}
+
+.approach-card {
+  border-top: 5px solid #66BB6A;
+}
+
+.values-card {
+  border-top: 5px solid #26C6DA;
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  color: inherit;
+  margin-bottom: 1rem;
+}
+
+/* Current Causes */
+.current-causes {
+  margin-bottom: 4rem;
+}
+
+.causes-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
 
+.cause-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.cause-card:hover {
+  transform: translateY(-5px);
+}
+
+.cause-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.cause-info {
+  padding: 1.5rem;
+}
+
+/* Founders Section */
+.founders-section {
+  margin-bottom: 4rem;
+}
+
+.founders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+}
+
 .founder-card {
   background: white;
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   text-align: center;
+  transition: transform 0.3s;
 }
 
-.founder-image img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
+.founder-card:hover {
+  transform: translateY(-5px);
+}
+
+.founder-image-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 1.5rem;
+}
+
+.founder-image-container img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #E3F2FD;
+}
+
+.founder-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #FFC107;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.founder-title {
+  color: #FF8F00;
+  font-weight: 600;
   margin-bottom: 1rem;
 }
 
-.founder-card h3 {
-  font-size: 1.3rem;
-  color: #333;
-  margin-bottom: 0.5rem;
-}
-
-.founder-card .title {
-  font-size: 1rem;
-  color: #666;
-  margin-bottom: 1rem;
-}
-
-.founder-card .bio {
-  font-size: 0.9rem;
-  color: #777;
+.founder-bio {
   margin-bottom: 1.5rem;
-  line-height: 1.5;
 }
 
 .contact-button {
-  background-color: #4a6fa5;
+  background: #1976D2;
   color: white;
   border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  font-weight: 600;
+  transition: background 0.3s;
+  margin-bottom: 1rem;
 }
 
 .contact-button:hover {
-  background-color: #3a5a80;
+  background: #1565C0;
 }
 
 .contact-info {
-  margin-top: 1rem;
-  padding: 0.8rem;
-  background-color: #f8f9fa;
-  border-radius: 4px;
-  font-size: 0.9rem;
+  background: #E3F2FD;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: left;
 }
 
 .contact-info p {
-  margin: 0.3rem 0;
-  color: #555;
+  margin: 0.5rem 0;
 }
 
-/* Responsive adjustments */
+.contact-info span {
+  font-weight: 600;
+  color: #0D47A1;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-  .info-section {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  .about-hero {
     flex-direction: column;
   }
   
-  .founders-grid {
+  .about-text,
+  .about-image-container {
+    min-width: 100%;
+  }
+  
+  .cards-container {
     grid-template-columns: 1fr;
   }
 }

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaDonate, FaHandHoldingHeart } from "react-icons/fa";
 import "../css/Donate.css";
 
 const Donate = () => {
@@ -6,18 +7,12 @@ const Donate = () => {
     firstName: "",
     lastName: "",
     email: "",
-    city: "",
-    country: "",
+    phone: "",
+    amount: "",
     message: ""
   });
   
   const [showPaymentOptions, setShowPaymentOptions] = useState(false);
-  const [paymentMethod, setPaymentMethod] = useState("");
-  const [cardDetails, setCardDetails] = useState({
-    cardNumber: "",
-    expiry: "",
-    cvv: ""
-  });
   const [paymentSuccess, setPaymentSuccess] = useState(false);
 
   const handleInputChange = (e) => {
@@ -25,29 +20,13 @@ const Donate = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleCardInputChange = (e) => {
-    const { name, value } = e.target;
-    setCardDetails(prev => ({ ...prev, [name]: value }));
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     setShowPaymentOptions(true);
   };
 
-  const handlePaymentMethodSelect = (method) => {
-    setPaymentMethod(method);
-    if (method === "mpesa") {
-      // Simulate M-Pesa payment prompt
-      setTimeout(() => {
-        setPaymentSuccess(true);
-      }, 2000);
-    }
-  };
-
-  const handleCardPayment = (e) => {
-    e.preventDefault();
-    // Simulate card payment processing
+  const handleMpesaPayment = () => {
+    // Simulate M-Pesa payment processing
     setTimeout(() => {
       setPaymentSuccess(true);
     }, 2000);
@@ -58,195 +37,161 @@ const Donate = () => {
       firstName: "",
       lastName: "",
       email: "",
-      city: "",
-      country: "",
+      phone: "",
+      amount: "",
       message: ""
     });
     setShowPaymentOptions(false);
-    setPaymentMethod("");
-    setCardDetails({
-      cardNumber: "",
-      expiry: "",
-      cvv: ""
-    });
     setPaymentSuccess(false);
   };
 
   return (
-    <div className="donate-container">
-      {/* Header with text overlay */}
-      <div className="header-image">
-        <img src='https://c1.wallpaperflare.com/preview/268/992/992/child-children-girl-happy.jpg' alt="Donate For Humanity" />
-        <h1 className="image-text">Donate For Humanity</h1>
-      </div>
+    <div className="donate-page">
+      {/* Decorative elements */}
+      <div className="decor-circle-blue"></div>
+      <div className="decor-circle-yellow"></div>
+      <div className="decor-wave-blue"></div>
+      <div className="decor-wave-yellow"></div>
       
-      {!paymentSuccess ? (
-        <>
-          {!showPaymentOptions ? (
-            <form className="donation-form" onSubmit={handleSubmit}>
-              <div className="form-fields">
-                <div className="form-row">
-                  <label>First Name:</label>
-                  <input 
-                    type="text" 
-                    name="firstName"
-                    value={formData.firstName}
-                    onChange={handleInputChange}
-                    required
-                  />
+      <div className="donate-container">
+        {/* Header section */}
+        <div className="donate-header">
+          <h1 className="donate-title">Make a Difference Today</h1>
+          <p className="donate-subtitle">Donate towards our causes and help transform lives</p>
+        </div>
+
+        {!paymentSuccess ? (
+          <>
+            {!showPaymentOptions ? (
+              <div className="form-container">
+                <div className="form-logo">
+                  <FaHandHoldingHeart className="logo-icon" />
                 </div>
-                <div className="form-row">
-                  <label>Last Name:</label>
-                  <input 
-                    type="text" 
-                    name="lastName"
-                    value={formData.lastName}
-                    onChange={handleInputChange}
-                    required
-                  />
+                
+                <form className="donation-form" onSubmit={handleSubmit}>
+                  <div className="form-group">
+                    <label>First Name</label>
+                    <input 
+                      type="text" 
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleInputChange}
+                      required
+                    />
+                  </div>
+                  
+                  <div className="form-group">
+                    <label>Last Name</label>
+                    <input 
+                      type="text" 
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleInputChange}
+                      required
+                    />
+                  </div>
+                  
+                  <div className="form-group">
+                    <label>Email Address</label>
+                    <input 
+                      type="email" 
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
+                    />
+                  </div>
+                  
+                  <div className="form-group">
+                    <label>Phone Number (for M-Pesa)</label>
+                    <input 
+                      type="tel" 
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      placeholder="e.g. 254712345678"
+                      required
+                    />
+                  </div>
+                  
+                  <div className="form-group">
+                    <label>Amount (KES)</label>
+                    <input 
+                      type="number" 
+                      name="amount"
+                      value={formData.amount}
+                      onChange={handleInputChange}
+                      placeholder="Enter amount"
+                      min="10"
+                      required
+                    />
+                  </div>
+                  
+                  <div className="form-group">
+                    <label>Message (Optional)</label>
+                    <textarea 
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      placeholder="Your message of support..."
+                    />
+                  </div>
+                  
+                  <button type="submit" className="donate-button">
+                    <FaDonate className="button-icon" />
+                    Proceed to Donate
+                  </button>
+                </form>
+                
+                <div className="donate-icon">
+                  <FaDonate className="floating-donate-icon" />
                 </div>
-                <div className="form-row">
-                  <label>Email Address:</label>
-                  <input 
-                    type="email" 
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                  />
-                </div>
-                <div className="form-row">
-                  <label>City:</label>
-                  <input 
-                    type="text" 
-                    name="city"
-                    value={formData.city}
-                    onChange={handleInputChange}
-                    required
-                  />
-                </div>
-                <div className="form-row">
-                  <label>Country:</label>
-                  <input 
-                    type="text" 
-                    name="country"
-                    value={formData.country}
-                    onChange={handleInputChange}
-                    required
-                  />
-                </div>
-                <div className="form-row">
-                  <label>Message (Optional):</label>
-                  <textarea 
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                  />
-                </div>
-                <button type="submit" className="donate-button">
-                  Donate Now
-                </button>
               </div>
-            </form>
-          ) : (
-            <div className="payment-options">
-              {!paymentMethod ? (
-                <>
-                  <h2>Select Payment Method</h2>
-                  <div className="payment-methods">
-                    <button 
-                      className="payment-method" 
-                      onClick={() => handlePaymentMethodSelect("mpesa")}
-                    >
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/M-PESA_LOGO-01.svg" alt="M-Pesa" />
-                      <span>M-Pesa</span>
-                    </button>
-                    <button 
-                      className="payment-method" 
-                      onClick={() => handlePaymentMethodSelect("paypal")}
-                    >
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" />
-                      <span>PayPal</span>
-                    </button>
-                    <button 
-                      className="payment-method" 
-                      onClick={() => handlePaymentMethodSelect("card")}
-                    >
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Credit Card" />
-                      <span>Credit/Debit Card</span>
+            ) : (
+              <div className="payment-section">
+                <div className="mpesa-payment">
+                  <h3>Complete Your Donation via M-Pesa</h3>
+                  <div className="payment-details">
+                    <p><strong>Amount:</strong> KES {formData.amount}</p>
+                    <p><strong>Phone:</strong> {formData.phone}</p>
+                  </div>
+                  
+                  <div className="mpesa-instructions">
+                    <p>You will receive an M-Pesa prompt on your phone to complete the payment.</p>
+                    <button onClick={handleMpesaPayment} className="mpesa-button">
+                      Initiate M-Pesa Payment
                     </button>
                   </div>
-                </>
-              ) : (
-                <>
-                  {paymentMethod === "mpesa" ? (
-                    <div className="mpesa-prompt">
-                      <h3>M-Pesa Payment</h3>
-                      <p>Check your phone for an M-Pesa prompt to complete the payment.</p>
-                      <div className="processing">
-                        <div className="spinner"></div>
-                        <p>Processing payment...</p>
-                      </div>
-                    </div>
-                  ) : (
-                    <form className="card-payment-form" onSubmit={handleCardPayment}>
-                      <h3>Enter Card Details</h3>
-                      <div className="form-row">
-                        <label>Card Number:</label>
-                        <input 
-                          type="text" 
-                          name="cardNumber"
-                          value={cardDetails.cardNumber}
-                          onChange={handleCardInputChange}
-                          placeholder="1234 5678 9012 3456"
-                          required
-                        />
-                      </div>
-                      <div className="form-row">
-                        <label>Expiry Date:</label>
-                        <input 
-                          type="text" 
-                          name="expiry"
-                          value={cardDetails.expiry}
-                          onChange={handleCardInputChange}
-                          placeholder="MM/YY"
-                          required
-                        />
-                      </div>
-                      <div className="form-row">
-                        <label>CVV:</label>
-                        <input 
-                          type="text" 
-                          name="cvv"
-                          value={cardDetails.cvv}
-                          onChange={handleCardInputChange}
-                          placeholder="123"
-                          required
-                        />
-                      </div>
-                      <button type="submit" className="pay-button">
-                        Pay Now
-                      </button>
-                    </form>
-                  )}
-                </>
-              )}
+                  
+                  <div className="processing" style={{ display: 'none' }}>
+                    <div className="spinner"></div>
+                    <p>Processing payment...</p>
+                  </div>
+                </div>
+              </div>
+            )}
+          </>
+        ) : (
+          <div className="thank-you-section">
+            <div className="thank-you-card">
+              <div className="checkmark-circle">
+                <div className="checkmark">✓</div>
+              </div>
+              <h2>Thank You for Your Generosity!</h2>
+              <p className="success-message">
+                Your donation of KES {formData.amount} has been received successfully.
+                A receipt has been sent to {formData.email}.
+              </p>
+              <p className="appreciation">
+                Your support makes a real difference in people's lives.
+              </p>
+              <button onClick={resetForm} className="back-button">
+                Make Another Donation
+              </button>
             </div>
-          )}
-        </>
-      ) : (
-        <div className="thank-you-message">
-          <div className="checkmark">✓</div>
-          <h2>Thank You for Your Donation!</h2>
-          <p>Your generous contribution will help make a difference in people's lives.</p>
-          <p>We've sent a receipt to {formData.email}</p>
-          <button onClick={resetForm} className="back-button">
-            Make Another Donation
-          </button>
-        </div>
-      )}
-
-     
+          </div>
+        )}
+      </div>
     </div>
   );
 };

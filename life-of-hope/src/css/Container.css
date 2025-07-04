@@ -1,0 +1,156 @@
+.container-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: -80px; /* Pulls up the next section */
+}
+
+.container-overlap {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: -80px auto 0; /* Negative margin to overlap image slider */
+  padding: 0 20px;
+  z-index: 20; /* Higher than image slider but below navbar */
+}
+
+.container-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.container-card {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Keep all other card styles from previous version */
+.card-icon {
+  width: 80px;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  font-size: 2rem;
+  color: #FFD700;
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.container-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.container-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.container-card h3::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background-color: #FFD700;
+}
+
+.container-card p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 25px;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.container-button {
+  background-color: #FFD700;
+  color: #2c3e50;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.container-button:hover {
+  background-color: #FFC000;
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+}
+
+.button-arrow {
+  transition: transform 0.3s ease;
+}
+
+.container-button:hover .button-arrow {
+  transform: translateX(5px);
+}
+
+/* Card variations */
+.donation-card {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.fundraising-card {
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+}
+
+.volunteer-card {
+  background: linear-gradient(135deg, #16a085, #1abc9c);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container-overlap {
+    margin-top: -60px;
+    padding: 0 15px;
+  }
+  
+  .container-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .container-wrapper {
+    margin-bottom: -60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-card {
+    padding: 30px 20px;
+  }
+  
+  .card-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 1.8rem;
+  }
+  
+  .container-overlap {
+    margin-top: -40px;
+  }
+  
+  .container-wrapper {
+    margin-bottom: -40px;
+  }
+}

@@ -1,15 +1,21 @@
 import React from 'react';
 import '../css/Intro.css';
 
-
 const Intro = () => {
   return (
     <div className="intro-container"> 
-     <h1 className="intro-title">Welcome!</h1>
+      {/* Background decorations */}
+      <div className="bg-decor-circle"></div>
+      <div className="bg-decor-wave"></div>
+      
       <section className="intro-section">
         <div className="intro-content"> 
-         
           <div className="intro-text-container">
+            <h1 className="intro-title">
+              Welcome!
+              <span className="title-underline"></span>
+              <span className="title-underline-accent"></span>
+            </h1>
             
             <p className="intro-text">
               to Life of Hope Community Center—a place where dreams are nurtured and futures are built. 
@@ -18,7 +24,10 @@ const Intro = () => {
               communities with love, hope, and purpose!
             </p>
           </div>
+          
           <div className="intro-image-container">
+            <div className="image-ship-decor"></div>
+            <div className="image-corner-accent"></div>
             <img 
               src="https://www.africaexpeditionsupport.com/wp-content/uploads/2015/11/communityservice-group-photo-kenya.jpg" 
               alt="Children at Life of Hope Community Center" 

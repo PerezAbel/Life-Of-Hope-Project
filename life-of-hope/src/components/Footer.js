@@ -1,59 +1,78 @@
-import React from 'react';
+import React from 'react'; 
+import '../css/Footer.css'
+import { FaFacebook, FaTwitter, FaYoutube, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { MdEmail, MdPhone, MdLocationOn } from 'react-icons/md';
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-950 text-white px-6 py-10">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-sm">
-        <div>
-          <h4 className="text-lg font-semibold mb-4 text-yellow-400">Navigation</h4>
-          <ul className="space-y-2">
-            <li className="hover:text-yellow-300 cursor-pointer">About Us</li>
-            <li className="hover:text-yellow-300 cursor-pointer">Gallery</li>
-            <li className="hover:text-yellow-300 cursor-pointer">Contact Us</li>
-            <li className="hover:text-yellow-300 cursor-pointer">Join Us</li>
-            <li className="hover:text-yellow-300 cursor-pointer">Donate Now</li>
-          </ul>
+    <footer className="footer">
+      <div className="footer-container">
+        <div className="footer-grid">
+          <div className="footer-column">
+            <h3 className="footer-title">Life of Hope</h3>
+            <p className="footer-description">
+              Empowering communities through education, healthcare, and sustainable development.
+            </p>
+            <div className="footer-social">
+              <a href="#" aria-label="Facebook"><FaFacebook /></a>
+              <a href="#" aria-label="Twitter"><FaTwitter /></a>
+              <a href="#" aria-label="YouTube"><FaYoutube /></a>
+              <a href="#" aria-label="LinkedIn"><FaLinkedin /></a>
+              <a href="#" aria-label="Instagram"><FaInstagram /></a>
+            </div>
+          </div>
+
+          <div className="footer-column">
+            <h4 className="footer-heading">Quick Links</h4>
+            <ul className="footer-links">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Our Programs</a></li>
+              <li><a href="#">Success Stories</a></li>
+              <li><a href="#">Get Involved</a></li>
+              <li><a href="#">Donate</a></li>
+            </ul>
+          </div>
+
+          <div className="footer-column">
+            <h4 className="footer-heading">Programs</h4>
+            <ul className="footer-links">
+              <li><a href="#">Education Initiative</a></li>
+              <li><a href="#">Healthcare Access</a></li>
+              <li><a href="#">Women Empowerment</a></li>
+              <li><a href="#">Youth Development</a></li>
+              <li><a href="#">Community Outreach</a></li>
+            </ul>
+          </div>
+
+          <div className="footer-column">
+            <h4 className="footer-heading">Contact Us</h4>
+            <ul className="footer-contact">
+              <li>
+                <MdLocationOn className="contact-icon" />
+                <span>123 Hope Avenue, Nairobi, Kenya</span>
+              </li>
+              <li>
+                <MdPhone className="contact-icon" />
+                <span>+254 700 123 456</span>
+              </li>
+              <li>
+                <MdEmail className="contact-icon" />
+                <span>info@lifeofhope.org</span>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <div>
-          <h4 className="text-lg font-semibold mb-4 text-yellow-400">Keep in Touch</h4>
-          <ul className="space-y-2">
-            <li className="hover:text-yellow-300 cursor-pointer">ShopAll</li>
-            <li className="hover:text-yellow-300 cursor-pointer">Phones</li>
-            <li className="hover:text-yellow-300 cursor-pointer">Laptops</li>
-            <li className="hover:text-yellow-300 cursor-pointer">iPads & Tablets</li>
-            <li className="hover:text-yellow-300 cursor-pointer">Gaming Consoles</li>
-            <li className="hover:text-yellow-300 cursor-pointer">Drones</li>
-            <li className="hover:text-yellow-300 cursor-pointer">Home Appliances</li>
-          </ul>
+        <div className="footer-bottom">
+          <div className="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+          </div>
+          <div className="footer-copyright">
+            © {new Date().getFullYear()} Life of Hope Community Project. All rights reserved.
+          </div>
         </div>
-
-
-        <div>
-          <h4 className="text-lg font-semibold mb-4 text-yellow-400">Info</h4>
-          <ul className="space-y-2">
-            <li className="hover:text-yellow-300 cursor-pointer">Shipping & Returns</li>
-            <li className="hover:text-yellow-300 cursor-pointer">Terms & Conditions</li>
-            <li className="hover:text-yellow-300 cursor-pointer">Payment Methods</li>
-            <li className="hover:text-yellow-300 cursor-pointer">Help</li>
-          </ul>
-        </div>
-
-
-        <div>
-          <h4 className="text-lg font-semibold mb-4 text-yellow-400">Captain Bummer HQ</h4>
-          <ul className="space-y-2">
-            <li className="hover:text-yellow-300">500 Terry Francine Street</li>
-            <li className="hover:text-yellow-300">San Francisco, CA 94158</li>
-            <li className="hover:text-yellow-300">📞 123-456-7890</li>
-            <li className="hover:text-yellow-300">📧 captain@bummerz.org</li>
-          </ul>
-        </div>
-      </div>
-
-      {/* Footer Bottom */}
-      <div className="mt-10 border-t border-blue-800 pt-6 text-center text-xs text-gray-400">
-        © 2025 Bage316 & Bunney Tunez | All rights reserved
       </div>
     </footer>
   );
