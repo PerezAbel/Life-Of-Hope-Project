@@ -65,66 +65,51 @@
   position: relative;
 }
 
-/* Logo Container Styles */
+/* Logo Styles */
 .navbar-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
 }
 
 .logo-link {
   display: flex;
   align-items: center;
   text-decoration: none;
-  gap: 10px;
 }
 
 .logo-icon {
+  width: 40px;
+  height: 40px;
+ 
+  border-radius: 50%;
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin-right: 12px;
 }
 
-/* Logo Image Styles */
-.logo-image {
-  height: 60px;
-  width: auto;
-  transition: all 0.3s ease;
-}
-
-/* Hide the SVG logo */
 .logo-icon svg {
-  display: none;
+  width: 20px;
+  height: 20px;
+  fill: #FFD700;
 }
 
-/* Logo Text Container */
 .logo-text {
   display: flex;
   flex-direction: column;
   line-height: 1.2;
 }
 
-/* Logo Main Text */
 .logo-main {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #2c3e50;
 }
 
-/* Logo Sub Text */
 .logo-sub {
-  font-size: 1.0rem;
+  font-size: 0.85rem;
+  font-weight: 500;
   color: #7f8c8d;
-  letter-spacing: 0.5px;
-}
-
-/* Logo Hover Effects */
-.logo-link:hover .logo-image {
-  transform: scale(1.05);
-  opacity: 0.9;
-}
-
-.logo-link:hover .logo-main {
-  color: #3498db;
 }
 
 /* Navigation Links */
@@ -326,17 +311,6 @@
 
   .navbar-button {
     display: none;
-  }
-}
-
-/* Small Mobile Devices */
-@media (max-width: 480px) {
-  .logo-text {
-    display: none; /* Hide text on very small screens */
-  }
-  
-  .logo-image {
-    height: 35px; /* Slightly smaller logo on mobile */
   }
 }
 
