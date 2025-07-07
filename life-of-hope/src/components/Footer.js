@@ -14,7 +14,7 @@ const Footer = () => {
               Empowering communities through education, healthcare, and sustainable development.
             </p>
             <div className="footer-social">
-              <a href="#" aria-label="Facebook"><FaFacebook /></a>
+              <a href="https://www.facebook.com/lifeofhopecp/" aria-label="Facebook"><FaFacebook /></a>
               <a href="#" aria-label="Twitter"><FaTwitter /></a>
               <a href="#" aria-label="YouTube"><FaYoutube /></a>
               <a href="https://www.linkedin.com/company/life-of-hope-community-project/ " aria-label="LinkedIn"><FaLinkedin /></a>
@@ -49,15 +49,15 @@ const Footer = () => {
             <ul className="footer-contact">
               <li>
                 <MdLocationOn className="contact-icon" />
-                <span>123 Hope Avenue, Nairobi, Kenya</span>
+                <span>Korogocho A Village, Nairobi, Kenya</span>
               </li>
               <li>
                 <MdPhone className="contact-icon" />
-                <span>+254 700 123 456</span>
+                <span>0722693520</span>
               </li>
               <li>
                 <MdEmail className="contact-icon" />
-                <span>info@lifeofhope.org</span>
+                <span>lifeofhopecp@gmail.com</span>
               </li>
             </ul>
           </div>
