@@ -1,24 +1,27 @@
 import React, { useState } from 'react';
 import { FaHeart, FaHandsHelping, FaUsers, FaLightbulb, FaBullseye, FaLeaf } from 'react-icons/fa';
 import '../css/AboutUs.css';
+import founder1 from '../Photos/founder1.png';
+import founder2 from '../Photos/founder2.png'; 
+import photo2 from '../Photos/photo2.png';
 
 const AboutUs = () => {
   const founders = [
     {
-      name: "Alex Bohm",
-      title: "CEO & Founder",
-      bio: "Visionary leader focused on driving meaningful change through innovative strategies and compassionate leadership. With 15 years in community development, Alex brings passion and expertise to every initiative.",
+      name: "Henry Makori",
+      title: "Founder",
+      bio: "Visionary leader focused on driving meaningful change through innovative strategies and compassionate leadership. With 14 years in community development, Alex brings passion and expertise to every initiative.",
       email: "alex@communityhope.org",
-      phone: "+1 (555) 123-4567",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cG9ydHJhaXR8ZW58MHx8MHx8fDA%3D"
+      phone: "07222693520",
+      image: founder1
     },
     {
       name: "Eady William Hyman",
-      title: "CTO & Co-Founder",
+      title: "Co-Founder",
       bio: "Technology expert with a deep understanding of systems and scalability, leading our tech evolution. Eady combines technical prowess with a heart for service to create impactful digital solutions.",
       email: "eady@communityhope.org",
-      phone: "+1 (555) 987-6543",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHBvcnRyYWl0fGVufDB8fDB8fHww"
+      phone: "0715841502",
+      image: founder2
     }
   ];
 
@@ -54,7 +57,7 @@ const AboutUs = () => {
           <div className="image-decoration blue"></div>
           <div className="image-decoration yellow"></div>
           <img 
-            src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZmFtaWx5JTIwdG9nZXRoZXJ8ZW58MHx8MHx8fDA%3D" 
+            src={photo2}
             alt="Community Hope" 
             className="about-main-image"
           />

@@ -17,7 +17,7 @@ const Footer = () => {
               <a href="#" aria-label="Facebook"><FaFacebook /></a>
               <a href="#" aria-label="Twitter"><FaTwitter /></a>
               <a href="#" aria-label="YouTube"><FaYoutube /></a>
-              <a href="#" aria-label="LinkedIn"><FaLinkedin /></a>
+              <a href="https://www.linkedin.com/company/life-of-hope-community-project/ " aria-label="LinkedIn"><FaLinkedin /></a>
               <a href="#" aria-label="Instagram"><FaInstagram /></a>
             </div>
           </div>

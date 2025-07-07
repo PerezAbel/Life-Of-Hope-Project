@@ -50,7 +50,7 @@ const Gallery = () => {
     },
     {
       id: 6,
-      src: 'https://source.unsplash.com/random/600x800?building',
+      src: 'https://www.movingmountainstrust.org/wp-content/uploads/2024/07/img-20221124-wa0007.jpg',
       alt: 'New Facility',
       caption: 'The grand opening of our new community center with state-of-the-art facilities.',
       likes: 143,
@@ -59,7 +59,7 @@ const Gallery = () => {
     },
     {
       id: 7,
-      src: 'https://source.unsplash.com/random/600x800?workshop',
+      src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgw8XqikRAQkOsm9eH4UmASjx-jOPGOrPG5deW6bhjUzkktv7OJ4mb9bCA7Iy2S0yPzdc3jLV5koVhCmtzTwd3iDOEo1a-naOl_Pe145udWyYKiGpRKhYX6e3QQrS5Lc71p6AMP8-UHF0CJucYXhpBkuOpBF9nZWJqkT9ohsxhKmqCIMZcBYOcV7Wu5kw/s1366/Screenshot%20(17).png',
       alt: 'Skill Workshop',
       caption: 'Participants in our vocational training workshop learning valuable job skills.',
       likes: 67,
@@ -68,7 +68,7 @@ const Gallery = () => {
     },
     {
       id: 8,
-      src: 'https://source.unsplash.com/random/600x800?celebration',
+      src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbFJ7t94YcikKtOOoQjfQQS3i2xJ9X0zVOdw&s',
       alt: 'Cultural Celebration',
       caption: 'Celebrating the diverse cultures that make up our wonderful community.',
       likes: 98,
@@ -77,7 +77,7 @@ const Gallery = () => {
     },
     {
       id: 9,
-      src: 'https://source.unsplash.com/random/600x800?seniors',
+      src: 'https://bank-of-africa.net/wp-content/uploads/2023/09/12_juin_Activites-de-la-Fondation-BANK-OF-AFRICA.2-1-scaled.jpg',
       alt: 'Senior Program',
       caption: 'Our senior wellness program helps keep our elders active and engaged.',
       likes: 54,
