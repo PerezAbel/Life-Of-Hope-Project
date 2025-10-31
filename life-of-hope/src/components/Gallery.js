@@ -1,11 +1,24 @@
 import React from 'react';
 import { FaHeart, FaRegHeart, FaComment, FaShare } from 'react-icons/fa';
-import '../css/Gallery.css'
+import '../css/Gallery.css'  
+import pic21 from '../Photos/pic21.jpeg'; 
+import pic22 from '../Photos/pic22.jpeg';  
+import pic23 from '../Photos/pic23.jpeg';  
+import pic24 from '../Photos/pic24.jpeg'; 
+import pic25 from '../Photos/pic25.jpeg';  
+import pic26 from '../Photos/pic26.jpeg';  
+import pic27 from '../Photos/pic27.jpeg'; 
+import pic28 from '../Photos/pic28.jpeg';  
+import pic29 from '../Photos/pic29.jpeg';  
+import pic30 from '../Photos/pic30.jpeg'; 
+import pic31 from '../Photos/pic31.jpeg';   
+import pic32 from '../Photos/pic32.jpeg';  
+
 const Gallery = () => {
   const galleryImages = [
     {
       id: 1,
-      src: 'https://www.comsolva.com/wp-content/uploads/2023/07/About-organizing-charity-events.webp',
+      src: pic21,
       alt: 'Community Event',
       caption: 'Our annual community gathering brought together over 500 people for a day of fun and connection.',
       likes: 124,
@@ -14,7 +27,7 @@ const Gallery = () => {
     },
     {
       id: 2,
-      src: 'https://www.helpersfoundation.org/wp-content/uploads/2021/04/IMG_20201207_092910.jpg',
+      src: pic22,
       alt: 'Education Program',
       caption: 'Children engaged in our innovative learning programs that focus on STEM education.',
       likes: 89,
@@ -23,7 +36,7 @@ const Gallery = () => {
     },
     {
       id: 3,
-      src: 'https://img.freepik.com/premium-photo/volunteers-serve-warm-meals-poor_482257-86676.jpg',
+      src: pic23,
       alt: 'Volunteer Team',
       caption: 'Our amazing volunteers who dedicate their time to make a difference in the community.',
       likes: 156,
@@ -32,7 +45,7 @@ const Gallery = () => {
     },
     {
       id: 4,
-      src: 'https://childhope.org.ph/wp-content/uploads/2022/09/ch-ngo-frontliner-support-e1664179532797.jpg',
+      src: pic24,
       alt: 'Family Support',
       caption: 'Providing essential resources and support to families in need throughout the year.',
       likes: 76,
@@ -41,7 +54,7 @@ const Gallery = () => {
     },
     {
       id: 5,
-      src: 'https://i0.wp.com/sapa-usa.org/wp-content/uploads/2024/05/african-charities.jpg?fit=1280%2C854&ssl=1',
+      src: pic25,
       alt: 'Charity Gala',
       caption: 'Our 2023 charity gala raised over $50,000 for community programs and initiatives.',
       likes: 210,
@@ -50,7 +63,7 @@ const Gallery = () => {
     },
     {
       id: 6,
-      src: 'https://www.movingmountainstrust.org/wp-content/uploads/2024/07/img-20221124-wa0007.jpg',
+      src: pic26,
       alt: 'New Facility',
       caption: 'The grand opening of our new community center with state-of-the-art facilities.',
       likes: 143,
@@ -59,7 +72,7 @@ const Gallery = () => {
     },
     {
       id: 7,
-      src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgw8XqikRAQkOsm9eH4UmASjx-jOPGOrPG5deW6bhjUzkktv7OJ4mb9bCA7Iy2S0yPzdc3jLV5koVhCmtzTwd3iDOEo1a-naOl_Pe145udWyYKiGpRKhYX6e3QQrS5Lc71p6AMP8-UHF0CJucYXhpBkuOpBF9nZWJqkT9ohsxhKmqCIMZcBYOcV7Wu5kw/s1366/Screenshot%20(17).png',
+      src: pic27,
       alt: 'Skill Workshop',
       caption: 'Participants in our vocational training workshop learning valuable job skills.',
       likes: 67,
@@ -68,7 +81,7 @@ const Gallery = () => {
     },
     {
       id: 8,
-      src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbFJ7t94YcikKtOOoQjfQQS3i2xJ9X0zVOdw&s',
+      src: pic28,
       alt: 'Cultural Celebration',
       caption: 'Celebrating the diverse cultures that make up our wonderful community.',
       likes: 98,
@@ -77,11 +90,38 @@ const Gallery = () => {
     },
     {
       id: 9,
-      src: 'https://bank-of-africa.net/wp-content/uploads/2023/09/12_juin_Activites-de-la-Fondation-BANK-OF-AFRICA.2-1-scaled.jpg',
+      src: pic29,
       alt: 'Senior Program',
       caption: 'Our senior wellness program helps keep our elders active and engaged.',
       likes: 54,
       comments: 8,
+      height: 'h-72'
+    }, 
+    {
+      id: 10,
+      src: pic30,
+      alt: 'Community Event',
+      caption: 'Our annual community gathering brought together over 500 people for a day of fun and connection.',
+      likes: 124,
+      comments: 23,
+      height: 'h-80'
+    },
+    {
+      id: 11,
+      src: pic31,
+      alt: 'Education Program',
+      caption: 'Children engaged in our innovative learning programs that focus on STEM education.',
+      likes: 89,
+      comments: 15,
+      height: 'h-64'
+    },
+    {
+      id: 12,
+      src: pic32,
+      alt: 'Volunteer Team',
+      caption: 'Our amazing volunteers who dedicate their time to make a difference in the community.',
+      likes: 156,
+      comments: 32,
       height: 'h-72'
     }
   ];
