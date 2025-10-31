@@ -38,7 +38,7 @@ const NavBar = () => {
       <div className="navbar-container">
         {/* Logo with restructured text and image */}
         <div className="navbar-logo">
-          <Link to="/" className="logo-link">
+          <Link to="/home" className="logo-link">
             <div className="logo-icon">
               <img src={Logo} alt="Life of Hope Logo" className="logo-image" />
             </div>

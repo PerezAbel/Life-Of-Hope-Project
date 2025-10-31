@@ -15,10 +15,10 @@ const Footer = () => {
             </p>
             <div className="footer-social">
               <a href="https://www.facebook.com/lifeofhopecp" aria-label="Facebook"><FaFacebook /></a>
-              <a href="#" aria-label="Twitter"><FaTwitter /></a>
-              <a href="#" aria-label="YouTube"><FaYoutube /></a>
+              <a href="https://x.com/HenryMakoriO?t=FnKSqyzab0H9MN_VebvKZw&s=09" aria-label="Twitter"><FaTwitter /></a>
+              <a href="https://youtube.com/@lifeofhopecommunityproject3418?si=2P41RKNF17vdNqB9" aria-label="YouTube"><FaYoutube /></a>
               <a href="https://www.linkedin.com/company/life-of-hope-community-project/ " aria-label="LinkedIn"><FaLinkedin /></a>
-              <a href="#" aria-label="Instagram"><FaInstagram /></a>
+              <a href="https://www.instagram.com/lifeovhope?igsh=NzRjNmc5ZDhrbXRj" aria-label="Instagram"><FaInstagram /></a>
             </div>
           </div>
 
