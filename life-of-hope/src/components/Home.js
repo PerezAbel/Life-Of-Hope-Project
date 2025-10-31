@@ -19,7 +19,7 @@ function Home() {
       <Intro/>      
       <Impact />   
       <Achievements/>  
-      <LatestNews/>
+      {/* <LatestNews/> */}
      
       {/* <Intend />   */}
       <Newsletter/>

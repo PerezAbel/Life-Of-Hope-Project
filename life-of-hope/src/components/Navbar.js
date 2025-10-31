@@ -75,7 +75,7 @@ const NavBar = () => {
           </Link>
 
           {/* Dropdown */}
-          <div className="dropdown-container">
+          {/* <div className="dropdown-container">
             <button
               onClick={() => setIsDropdownOpen(prev => !prev)}
               className="dropdown-button"
@@ -101,9 +101,9 @@ const NavBar = () => {
                   <span className="dropdown-bullet"></span>
                   Teen Moms
                 </Link>
-              </div>
-            )}
-          </div>
+              </div> */}
+            {/* )} */}
+          {/* </div> */}
         </div>
 
         {/* Donate Button */}

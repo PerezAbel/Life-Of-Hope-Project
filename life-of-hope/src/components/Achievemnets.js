@@ -72,7 +72,7 @@ const LifeOfHope = () => {
       <div className="bg-decor-2"></div>
       
       {/* Testimonial Slider Section */}
-      <div className="testimonial-section">
+      {/* <div className="testimonial-section">
         <div className="section-yellow-border"></div>
         
         <div className="testimonial-content">
@@ -121,7 +121,7 @@ const LifeOfHope = () => {
           </div>
           <div className="image-yellow-accent"></div>
         </div>
-      </div>
+      </div> */}
 
       {/* Our Impact Section */}
       <div className="impact-section">
