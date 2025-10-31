@@ -16,11 +16,11 @@ const AboutUs = () => {
       image: founder1
     },
     {
-      name: "Eady William Hyman",
+      name: "Jacinta Nkatha",
       title: "Co-Founder",
       bio: "Technology expert with a deep understanding of systems and scalability, leading our tech evolution. Eady combines technical prowess with a heart for service to create impactful digital solutions.",
-      email: "eady@communityhope.org",
-      phone: "0715841502",
+      email: "Jacinta042@gmail.com",
+      phone: "0720044413",
       image: founder2
     }
   ];

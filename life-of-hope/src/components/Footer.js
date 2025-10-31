@@ -14,7 +14,7 @@ const Footer = () => {
               Empowering communities through education, healthcare, and sustainable development.
             </p>
             <div className="footer-social">
-              <a href="https://www.facebook.com/lifeofhopecp/" aria-label="Facebook"><FaFacebook /></a>
+              <a href="https://www.facebook.com/lifeofhopecp" aria-label="Facebook"><FaFacebook /></a>
               <a href="#" aria-label="Twitter"><FaTwitter /></a>
               <a href="#" aria-label="YouTube"><FaYoutube /></a>
               <a href="https://www.linkedin.com/company/life-of-hope-community-project/ " aria-label="LinkedIn"><FaLinkedin /></a>

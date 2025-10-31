@@ -1,7 +1,25 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import '../css/Impact.css';
+import vid1 from '../Photos/vid1.mp4';
+import vid2 from '../Photos/vid2.mp4';
 
 const Impact = () => {
+  const videos = [vid1, vid2];
+  const [currentVideo, setCurrentVideo] = useState(0);
+  const videoRef = useRef(null);
+
+  const handleVideoEnd = () => {
+    // Automatically switch to next video when one finishes
+    const nextVideo = (currentVideo + 1) % videos.length;
+    setCurrentVideo(nextVideo);
+  };
+
+  const handlePlayClick = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  };
+
   return (
     <div className="impact-container">
       {/* White decorative elements */}
@@ -17,15 +35,15 @@ const Impact = () => {
           <p className="story-subtitle">Watch how we're transforming lives in our community</p>
         </div>
 
-        <div className="video-container">
-          <div className="video-placeholder">
-            <div className="play-button">
-              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8 5V19L19 12L8 5Z" fill="white"/>
-              </svg>
-            </div>
-            <div className="video-caption">Play Our Story</div>
-          </div>
+        <div className="video-container" onClick={handlePlayClick}>
+          <video
+            ref={videoRef}
+            src={videos[currentVideo]}
+            controls
+            onEnded={handleVideoEnd}
+            width="100%"
+            height="100%"
+          />
         </div>
       </div>
     </div>
