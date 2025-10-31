@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaHandHoldingHeart, FaHandsHelping, FaUserFriends } from 'react-icons/fa';
 import '../css/Container.css';
+import { Link } from 'react-router-dom';
 
 const Container = () => {
   return (
@@ -13,11 +14,13 @@ const Container = () => {
               <FaHandHoldingHeart />
             </div>
             <h3>Make Donation</h3>
-            <p>Help today because tomorrow you may be the one who needs helping!</p>
+            <p>Help today because tomorrow you may be the one who needs helping!</p>  
+            <Link to="/donate" className="nav-link">
             <button className="container-button">
-              Read More
+              Donate 
               <span className="button-arrow">→</span>
-            </button>
+            </button> 
+            </Link>
           </div>
 
           {/* Fundraising Card */}
@@ -26,11 +29,13 @@ const Container = () => {
               <FaHandsHelping />
             </div>
             <h3>Fundraising</h3>
-            <p>Help today because tomorrow you may be the one who needs helping!</p>
+            <p>Help today because tomorrow you may be the one who needs helping!</p>  
+             <Link to="/donate" className="nav-link">
             <button className="container-button">
               Read More
               <span className="button-arrow">→</span>
-            </button>
+            </button> 
+            </Link>
           </div>
 
           {/* Volunteer Card */}
@@ -39,11 +44,13 @@ const Container = () => {
               <FaUserFriends />
             </div>
             <h3>Become A Volunteer</h3>
-            <p>Help today because tomorrow you may be the one who needs helping!</p>
+            <p>Help today because tomorrow you may be the one who needs helping!</p>  
+             <Link to="/donate" className="nav-link">
             <button className="container-button">
               Read More
               <span className="button-arrow">→</span>
-            </button>
+            </button> 
+            </Link>
           </div>
         </div>
       </div>
