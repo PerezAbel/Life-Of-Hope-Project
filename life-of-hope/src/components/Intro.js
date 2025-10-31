@@ -1,5 +1,6 @@
 import React from 'react';
-import '../css/Intro.css';
+import '../css/Intro.css';  
+import photo2 from '../Photos/photo2.png'
 
 const Intro = () => {
   return (
@@ -29,7 +30,7 @@ const Intro = () => {
             <div className="image-ship-decor"></div>
             <div className="image-corner-accent"></div>
             <img 
-              src="https://www.africaexpeditionsupport.com/wp-content/uploads/2015/11/communityservice-group-photo-kenya.jpg" 
+              src= {photo2}
               alt="Children at Life of Hope Community Center" 
               className="intro-image"
             />

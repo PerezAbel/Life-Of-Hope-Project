@@ -1,26 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import '../css/ImageSlider.css';
-
+import '../css/ImageSlider.css';   
+import pic33 from '../Photos/pic33.jpg';  
+import pic30 from '../Photos/pic30.jpeg'; 
+import pic32 from '../Photos/pic32.jpeg'; 
 const ImageSlider = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [fade, setFade] = useState(true);
 
   const slides = [
     {
-      image: 'https://www.wvi.org/sites/default/files/teen%20moms.jpg',
+      image: pic33,
       title: 'Empowering Young Mothers',
       subtitle: 'Supporting teen moms through education and childcare',
       text: 'Our programs help young mothers complete their education while providing quality childcare'
     },
     {
-      image: 'https://mg.co.za/wp-content/uploads/2019/03/1effe0b2-00-rich-school-poor-school-the-great-divide-persists.jpeg',
+      image: pic30,
       title: 'Bridging the Education Gap',
       subtitle: 'Equal opportunities for all children',
       text: 'We work to provide quality education resources to underserved communities'
     },
     {
-      image: 'https://storage.needpix.com/rsynced_images/africa-3828790_1280.jpg',
+      image: pic32,
       title: 'Community Development',
       subtitle: 'Building sustainable futures',
       text: 'Our community initiatives create long-term solutions for poverty alleviation'
