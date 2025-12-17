@@ -1,0 +1,241 @@
+/* News.css */
+.news-section {
+  position: relative;
+  padding: 80px 20px;
+  background-color: #FFF9E6; /* Light yellow background */
+  overflow: hidden;
+}
+
+/* Background Decorations */
+.news-bg-decor-1 {
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  background-color: #FFD700;
+  opacity: 0.1;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.news-bg-decor-2 {
+  position: absolute;
+  bottom: -150px;
+  left: -150px;
+  width: 400px;
+  height: 400px;
+  background-color: #3498db;
+  opacity: 0.08;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  z-index: 0;
+}
+
+.news-bg-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(rgba(255, 215, 0, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title {
+  color: #151515;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.title-decoration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.blue-line {
+  width: 80px;
+  height: 4px;
+  background-color: #3498db;
+  border-radius: 2px;
+}
+
+.yellow-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #FFD700;
+  border-radius: 50%;
+}
+
+.blue-wave {
+  width: 100px;
+  height: 8px;
+  background: linear-gradient(90deg, #3498db, transparent);
+  border-radius: 4px;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.news-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Decorations */
+.card-yellow-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #FFD700;
+}
+
+.card-blue-accent {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #3498db;
+}
+
+.card-corner-decor {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 215, 0, 0.1);
+  border-radius: 50%;
+}
+
+.news-image {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.news-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.news-card:hover .news-image img {
+  transform: scale(1.05);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.3));
+}
+
+.news-content {
+  padding: 25px;
+  position: relative;
+}
+
+.news-date {
+  color: #3498db;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.news-title {
+  color: #151515;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.news-excerpt {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.news-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #151515;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.news-link:hover {
+  color: #FFD700;
+}
+
+.news-link svg {
+  transition: transform 0.3s ease;
+}
+
+.news-link:hover svg {
+  transform: translateX(5px);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .news-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .news-section {
+    padding: 60px 15px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .news-image {
+    height: 200px;
+  }
+}

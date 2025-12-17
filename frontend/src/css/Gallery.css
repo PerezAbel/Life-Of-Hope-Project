@@ -1,0 +1,202 @@
+/* Gallery.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap');
+
+/* Gallery Container */
+.gallery-container {
+  background-color: #FFF5E6;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.8) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.8) 0%, transparent 20%);
+  min-height: 100vh;
+  padding-bottom: 3rem;
+}
+
+/* Gallery Header */
+.gallery-container header {
+  position: relative;
+  text-align: center;
+  padding: 4rem 0;
+  margin-bottom: 2rem;
+}
+
+.gallery-container header::before,
+.gallery-container header::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #FF6B35, transparent);
+}
+
+.gallery-container header::before {
+  top: 0;
+}
+
+.gallery-container header::after {
+  bottom: 0;
+}
+
+/* Gallery Title */
+.gallery-container h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  color: #f4a906;
+  text-shadow: 2px 2px 4px rgba(16, 1, 92, 0.5);
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.gallery-container h1::before,
+.gallery-container h1::after {
+  content: "✻";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffc635;
+  font-size: 1.5rem;
+}
+
+.gallery-container h1::before {
+  left: 0;
+}
+
+.gallery-container h1::after {
+  right: 0;
+}
+
+/* Gallery Grid */
+.gallery-container .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Gallery Items */
+.gallery-container .grid > div {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.gallery-container .grid > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-container .grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-container .grid > div:hover img {
+  transform: scale(1.05);
+}
+
+/* Image Overlay */
+.gallery-container .grid > div::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-container .grid > div:hover::before {
+  opacity: 1;
+}
+
+/* Caption */
+.gallery-container .grid > div > div {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: white;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.gallery-container .grid > div:hover > div {
+  transform: translateY(0);
+}
+
+/* Caption Text */
+.gallery-container .grid h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.gallery-container .grid p {
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* Action Buttons */
+.gallery-container .grid button {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  transition: color 0.2s ease;
+}
+
+.gallery-container .grid button:hover {
+  color: #FF6B35;
+}
+
+.gallery-container .grid button svg {
+  font-size: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .gallery-container h1 {
+    font-size: 2.5rem;
+    padding: 0 1.5rem;
+  }
+
+  .gallery-container h1::before,
+  .gallery-container h1::after {
+    font-size: 1.2rem;
+  }
+
+  .gallery-container .grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-container h1 {
+    font-size: 2rem;
+    padding: 0 1rem;
+  }
+
+  .gallery-container h1::before,
+  .gallery-container h1::after {
+    font-size: 1rem;
+  }
+
+  .gallery-container .grid {
+    grid-template-columns: 1fr;
+  }
+}
